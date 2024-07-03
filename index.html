@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = document.getElementById('root');
+        // const h3 = React.createElement('h3', {id : "example-h3"}, "Hello I am a h3 element");
+        function Title () {
+            return <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+                Hello I am Title
+            </h3>
+        };
+        
+        
+        const Button = () => (
+            <button 
+                style={{
+                    backgroundColor: "blue",
+                }}
+                onClick={() => console.log("im clicked")}
+            >
+                Click me
+            </button>
+        );
+        // const app = React.createElement("div", null, [Title, Button]);
+        const Container = (
+            <div>
+                <Title />
+                <Button />
+            </div>
+        );
+        ReactDOM.render(Container, root);
+    </script>
+</html>
