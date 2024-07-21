@@ -23,9 +23,9 @@ function Home() {
         <div>
             {loading ? <h1>Loading...</h1> : null}
             <div>
-                {movies.map((movie) => (
+                {movies.map((movie, index) => (
                     <Movie
-                        key={movie.id}
+                        key={index}
                         id={movie.id}
                         medium_cover_image={movie.medium_cover_image}
                         title={movie.title}
@@ -34,7 +34,6 @@ function Home() {
                     />
                 ))}
             </div>
-            {movies.map((movie) => <li>{movie.title}</li>)}
         </div>
     )
 }

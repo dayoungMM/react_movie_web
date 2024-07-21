@@ -2,9 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Import
+## Install
 ```
 npm i react-router-dom@5.3.0
+npm i gh-pages
 
 ```
 ## Available Scripts
